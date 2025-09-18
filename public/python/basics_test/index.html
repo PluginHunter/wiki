@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta name="generator" content="Relearn 8.0.1+b23cf6629eada0c2802f34ae4012e04343497862">
+    <meta name="description" content="Basics Basic Python functions len() - function returns the length of a string, list, tuple, or dictionary. type() - function returns the type of a variable. Strings String slicing string[start:end] - slices a string from index start to end. The end index is exclusive. string[start:end:step] - slices a string from index start to end with a step of step (the step can have a negative value). String methods string.lower() - converts all characters in the string to lowercase. string.upper() - converts all characters in the string to uppercase. string.capitalize() - capitalizes the first character of the string. string.title() - capitalizes the first character of each word in the string. string.strip() - removes leading and trailing whitespace from the string. string.lstrip() - removes leading whitespace from the string. string.rstrip() - removes trailing whitespace from the string. string.replace(old, new) - replaces occurrences of old substring with new substring. string.split(delimiter) - splits the string into a list of substrings based on the specified delimiter. String functions string.startswith(substring) - checks if the string starts with the specified substring. Returns True or False. string.endswith(substring) - checks if the string ends with the specified substring. Returns True or False. string.find(substring) - returns the lowest index of the substring if found in the string. Returns -1 if not found. string.index(substring) - returns the lowest index of the substring if found in the string. Raises a ValueError if not found. string.count(substring) - returns the number of occurrences of the substring in the string. Type casting float_num = 10.5 int_num = int(float_num) # Converts float to int, truncating the decimal part print(int_num) # Output: 10 print(type(int_num)) # Output: &lt;class &#39;int&#39;&gt; str_num = str(int_num) # Converts int to string print(str_num) # Output: &#39;10&#39; print(type(str_num)) # Output: &lt;class &#39;str&#39;&gt; Logical operators and or &amp; - logical AND operator. Returns True if both operands are true. or or |- logical OR operator. Returns True if at least one operand is true. not or ! - logical NOT operator. Returns True if the operand is false. Conditional statements if a &gt; b: print(&#34;a is greater than b&#34;) elif a &lt; b: print(&#34;a is less than b&#34;) else: print(&#34;a is equal to b&#34;) Loops For loop A for loop is used to iterate over a sequence (like a list, tuple, dictionary, set, or string - basically any iterable object).">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Basics - to remove :: Second Brain - Cheat Sheets and other utilites">
+    <meta name="twitter:description" content="Basics Basic Python functions len() - function returns the length of a string, list, tuple, or dictionary. type() - function returns the type of a variable. Strings String slicing string[start:end] - slices a string from index start to end. The end index is exclusive. string[start:end:step] - slices a string from index start to end with a step of step (the step can have a negative value). String methods string.lower() - converts all characters in the string to lowercase. string.upper() - converts all characters in the string to uppercase. string.capitalize() - capitalizes the first character of the string. string.title() - capitalizes the first character of each word in the string. string.strip() - removes leading and trailing whitespace from the string. string.lstrip() - removes leading whitespace from the string. string.rstrip() - removes trailing whitespace from the string. string.replace(old, new) - replaces occurrences of old substring with new substring. string.split(delimiter) - splits the string into a list of substrings based on the specified delimiter. String functions string.startswith(substring) - checks if the string starts with the specified substring. Returns True or False. string.endswith(substring) - checks if the string ends with the specified substring. Returns True or False. string.find(substring) - returns the lowest index of the substring if found in the string. Returns -1 if not found. string.index(substring) - returns the lowest index of the substring if found in the string. Raises a ValueError if not found. string.count(substring) - returns the number of occurrences of the substring in the string. Type casting float_num = 10.5 int_num = int(float_num) # Converts float to int, truncating the decimal part print(int_num) # Output: 10 print(type(int_num)) # Output: &lt;class &#39;int&#39;&gt; str_num = str(int_num) # Converts int to string print(str_num) # Output: &#39;10&#39; print(type(str_num)) # Output: &lt;class &#39;str&#39;&gt; Logical operators and or &amp; - logical AND operator. Returns True if both operands are true. or or |- logical OR operator. Returns True if at least one operand is true. not or ! - logical NOT operator. Returns True if the operand is false. Conditional statements if a &gt; b: print(&#34;a is greater than b&#34;) elif a &lt; b: print(&#34;a is less than b&#34;) else: print(&#34;a is equal to b&#34;) Loops For loop A for loop is used to iterate over a sequence (like a list, tuple, dictionary, set, or string - basically any iterable object).">
+    <meta property="og:url" content="http://localhost:1313/python/basics_test/index.html">
+    <meta property="og:site_name" content="Second Brain - Cheat Sheets and other utilites">
+    <meta property="og:title" content="Basics - to remove :: Second Brain - Cheat Sheets and other utilites">
+    <meta property="og:description" content="Basics Basic Python functions len() - function returns the length of a string, list, tuple, or dictionary. type() - function returns the type of a variable. Strings String slicing string[start:end] - slices a string from index start to end. The end index is exclusive. string[start:end:step] - slices a string from index start to end with a step of step (the step can have a negative value). String methods string.lower() - converts all characters in the string to lowercase. string.upper() - converts all characters in the string to uppercase. string.capitalize() - capitalizes the first character of the string. string.title() - capitalizes the first character of each word in the string. string.strip() - removes leading and trailing whitespace from the string. string.lstrip() - removes leading whitespace from the string. string.rstrip() - removes trailing whitespace from the string. string.replace(old, new) - replaces occurrences of old substring with new substring. string.split(delimiter) - splits the string into a list of substrings based on the specified delimiter. String functions string.startswith(substring) - checks if the string starts with the specified substring. Returns True or False. string.endswith(substring) - checks if the string ends with the specified substring. Returns True or False. string.find(substring) - returns the lowest index of the substring if found in the string. Returns -1 if not found. string.index(substring) - returns the lowest index of the substring if found in the string. Raises a ValueError if not found. string.count(substring) - returns the number of occurrences of the substring in the string. Type casting float_num = 10.5 int_num = int(float_num) # Converts float to int, truncating the decimal part print(int_num) # Output: 10 print(type(int_num)) # Output: &lt;class &#39;int&#39;&gt; str_num = str(int_num) # Converts int to string print(str_num) # Output: &#39;10&#39; print(type(str_num)) # Output: &lt;class &#39;str&#39;&gt; Logical operators and or &amp; - logical AND operator. Returns True if both operands are true. or or |- logical OR operator. Returns True if at least one operand is true. not or ! - logical NOT operator. Returns True if the operand is false. Conditional statements if a &gt; b: print(&#34;a is greater than b&#34;) elif a &lt; b: print(&#34;a is less than b&#34;) else: print(&#34;a is equal to b&#34;) Loops For loop A for loop is used to iterate over a sequence (like a list, tuple, dictionary, set, or string - basically any iterable object).">
+    <meta property="og:locale" content="en_gb">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Python">
+    <meta property="article:published_time" content="2025-09-18T14:23:35+01:00">
+    <meta property="article:modified_time" content="2025-09-18T14:23:35+01:00">
+    <meta itemprop="name" content="Basics - to remove :: Second Brain - Cheat Sheets and other utilites">
+    <meta itemprop="description" content="Basics Basic Python functions len() - function returns the length of a string, list, tuple, or dictionary. type() - function returns the type of a variable. Strings String slicing string[start:end] - slices a string from index start to end. The end index is exclusive. string[start:end:step] - slices a string from index start to end with a step of step (the step can have a negative value). String methods string.lower() - converts all characters in the string to lowercase. string.upper() - converts all characters in the string to uppercase. string.capitalize() - capitalizes the first character of the string. string.title() - capitalizes the first character of each word in the string. string.strip() - removes leading and trailing whitespace from the string. string.lstrip() - removes leading whitespace from the string. string.rstrip() - removes trailing whitespace from the string. string.replace(old, new) - replaces occurrences of old substring with new substring. string.split(delimiter) - splits the string into a list of substrings based on the specified delimiter. String functions string.startswith(substring) - checks if the string starts with the specified substring. Returns True or False. string.endswith(substring) - checks if the string ends with the specified substring. Returns True or False. string.find(substring) - returns the lowest index of the substring if found in the string. Returns -1 if not found. string.index(substring) - returns the lowest index of the substring if found in the string. Raises a ValueError if not found. string.count(substring) - returns the number of occurrences of the substring in the string. Type casting float_num = 10.5 int_num = int(float_num) # Converts float to int, truncating the decimal part print(int_num) # Output: 10 print(type(int_num)) # Output: &lt;class &#39;int&#39;&gt; str_num = str(int_num) # Converts int to string print(str_num) # Output: &#39;10&#39; print(type(str_num)) # Output: &lt;class &#39;str&#39;&gt; Logical operators and or &amp; - logical AND operator. Returns True if both operands are true. or or |- logical OR operator. Returns True if at least one operand is true. not or ! - logical NOT operator. Returns True if the operand is false. Conditional statements if a &gt; b: print(&#34;a is greater than b&#34;) elif a &lt; b: print(&#34;a is less than b&#34;) else: print(&#34;a is equal to b&#34;) Loops For loop A for loop is used to iterate over a sequence (like a list, tuple, dictionary, set, or string - basically any iterable object).">
+    <meta itemprop="datePublished" content="2025-09-18T14:23:35+01:00">
+    <meta itemprop="dateModified" content="2025-09-18T14:23:35+01:00">
+    <meta itemprop="wordCount" content="1900">
+    <title>Basics - to remove :: Second Brain - Cheat Sheets and other utilites</title>
+    <link href="/css/auto-complete/auto-complete.min.css?1758206728" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1758206728" defer></script>
+    <script src="/js/search-lunr.js?1758206728" defer></script>
+    <script src="/js/search.js?1758206728" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1758206728";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1758206728" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1758206728" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1758206728" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1758206728" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1758206728" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1758206728" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1758206728" rel="stylesheet">
+    <link href="/css/theme.css?1758206728" rel="stylesheet">
+    <link href="/css/format-html.css?1758206728" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/python\/basics_test\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/python/basics_test/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#basic-python-functions">Basic Python functions</a></li>
+    <li><a href="#strings">Strings</a>
+      <ul>
+        <li><a href="#string-slicing">String slicing</a></li>
+        <li><a href="#string-methods">String methods</a></li>
+        <li><a href="#string-functions">String functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#type-casting">Type casting</a></li>
+    <li><a href="#logical-operators">Logical operators</a></li>
+    <li><a href="#conditional-statements">Conditional statements</a></li>
+    <li><a href="#loops">Loops</a>
+      <ul>
+        <li><a href="#for-loop">For loop</a></li>
+        <li><a href="#while-loop">While loop</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#lists----">Lists - <code>&#34;[ ]&#34;</code></a></li>
+    <li><a href="#tuples----">Tuples - <code>&#34;( )&#34;</code></a></li>
+    <li><a href="#dictionaries----">Dictionaries - <code>&#34;{ }&#34;</code></a></li>
+    <li><a href="#sets----">Sets - <code>&#34;{ }&#34;</code></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Second Brain - Cheat Sheets and other utilites</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/python/index.html"><span itemprop="name">Python</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Basics - to remove</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/python/2---data_strucutures/index.html" title="Data_strucutures (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable python" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="basics---to-remove">Basics - to remove</h1>
+
+<h1 id="basics">Basics</h1>
+<h2 id="basic-python-functions">Basic Python functions</h2>
+<ul>
+<li><code>len()</code>  - function returns the length of a string, list, tuple, or dictionary.</li>
+<li><code>type()</code> - function returns the type of a variable.</li>
+</ul>
+<h2 id="strings">Strings</h2>
+<h3 id="string-slicing">String slicing</h3>
+<ul>
+<li><code>string[start:end]</code> - slices a string from index <code>start</code> to <code>end</code>. The end index is exclusive.</li>
+<li><code>string[start:end:step]</code> - slices a string from index <code>start</code> to <code>end</code> with a step of <code>step</code> (the step can have a negative value).</li>
+</ul>
+<h3 id="string-methods">String methods</h3>
+<ul>
+<li><code>string.lower()</code> - converts all characters in the string to lowercase.</li>
+<li><code>string.upper()</code> - converts all characters in the string to uppercase.</li>
+<li><code>string.capitalize()</code> - capitalizes the first character of the string.</li>
+<li><code>string.title()</code> - capitalizes the first character of each word in the string.</li>
+<li><code>string.strip()</code> - removes leading and trailing whitespace from the string.
+<ul>
+<li><code>string.lstrip()</code> - removes leading whitespace from the string.</li>
+<li><code>string.rstrip()</code> - removes trailing whitespace from the string.</li>
+</ul>
+</li>
+<li><code>string.replace(old, new)</code> - replaces occurrences of <code>old</code> substring with <code>new</code> substring.</li>
+<li><code>string.split(delimiter)</code> - splits the string into a list of substrings based on the specified <code>delimiter</code>.</li>
+</ul>
+<h3 id="string-functions">String functions</h3>
+<ul>
+<li><code>string.startswith(substring)</code> - checks if the string starts with the specified <code>substring</code>. Returns <code>True</code> or <code>False</code>.</li>
+<li><code>string.endswith(substring)</code> - checks if the string ends with the specified <code>substring</code>. Returns <code>True</code> or <code>False</code>.</li>
+<li><code>string.find(substring)</code> - returns the lowest index of the substring if found in the string. Returns <code>-1</code> if not found.</li>
+<li><code>string.index(substring)</code> - returns the lowest index of the substring if found in the string. Raises a <code>ValueError</code> if not found.</li>
+<li><code>string.count(substring)</code> - returns the number of occurrences of the substring in the string.</li>
+</ul>
+<h2 id="type-casting">Type casting</h2>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>float_num <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.5</span>
+</span></span><span style="display:flex;"><span>int_num <span style="color:#f92672">=</span> int(float_num)  <span style="color:#75715e"># Converts float to int, truncating the decimal part</span>
+</span></span><span style="display:flex;"><span>print(int_num)  <span style="color:#75715e"># Output: 10</span>
+</span></span><span style="display:flex;"><span>print(type(int_num))  <span style="color:#75715e"># Output: &lt;class &#39;int&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>str_num <span style="color:#f92672">=</span> str(int_num)  <span style="color:#75715e"># Converts int to string</span>
+</span></span><span style="display:flex;"><span>print(str_num)  <span style="color:#75715e"># Output: &#39;10&#39;</span>
+</span></span><span style="display:flex;"><span>print(type(str_num))  <span style="color:#75715e"># Output: &lt;class &#39;str&#39;&gt;</span></span></span></code></pre></div>
+<h2 id="logical-operators">Logical operators</h2>
+<ul>
+<li><code>and</code> or <code>&amp;</code> - logical AND operator. Returns <code>True</code> if both operands are true.</li>
+<li><code>or</code>  or <code>|</code>- logical OR operator. Returns <code>True</code> if at least one operand is true.</li>
+<li><code>not</code> or <code>!</code> - logical NOT operator. Returns <code>True</code> if the operand is false.</li>
+</ul>
+<h2 id="conditional-statements">Conditional statements</h2>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> a <span style="color:#f92672">&gt;</span> b:
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;a is greater than b&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> a <span style="color:#f92672">&lt;</span> b:
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;a is less than b&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;a is equal to b&#34;</span>)</span></span></code></pre></div>
+<h2 id="loops">Loops</h2>
+<h3 id="for-loop">For loop</h3>
+<p>A for loop is used to iterate over a sequence (like a list, tuple, dictionary, set, or string - basically any iterable object).</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;cherry&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> fruit <span style="color:#f92672">in</span> fruits:
+</span></span><span style="display:flex;"><span>  print(fruit)</span></span></code></pre></div>
+<h3 id="while-loop">While loop</h3>
+<p>A while loop is used to execute a block of code as long as a condition is true.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>:
+</span></span><span style="display:flex;"><span>  print(i)
+</span></span><span style="display:flex;"><span>  i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span></span></span></code></pre></div>
+<h1 id="data-structures">Data structures</h1>
+<h2 id="lists----">Lists - <code>&quot;[ ]&quot;</code></h2>
+<p>A list is a <strong>mutable</strong> collection which is <strong>ordered</strong> and changeable. Allows duplicate members.
+It can store items of different data types.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;cherry&#34;</span>]
+</span></span><span style="display:flex;"><span>print(fruits[<span style="color:#ae81ff">0</span>])  <span style="color:#75715e"># First element: Output: apple</span>
+</span></span><span style="display:flex;"><span>print(fruits[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])  <span style="color:#75715e"># Last element: Output: cherry</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;orange&#34;</span>)  <span style="color:#75715e"># Adds orange to the end of the list</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: [&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;, &#39;orange&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#34;banana&#34;</span>)  <span style="color:#75715e"># Removes banana from the list</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: [&#39;apple&#39;, &#39;cherry&#39;, &#39;orange&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;kiwi&#34;</span>)  <span style="color:#75715e"># Inserts kiwi at index 1</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: [&#39;apple&#39;, &#39;kiwi&#39;, &#39;cherry&#39;, &#39;orange&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fruit[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mango&#34;</span>  <span style="color:#75715e"># Changes the first element to mango</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: [&#39;mango&#39;, &#39;kiwi&#39;, &#39;cherry&#39;, &#39;orange&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>popped <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span>pop()  <span style="color:#75715e"># Removes the last element (or you can specify an index)</span>
+</span></span><span style="display:flex;"><span>                       <span style="color:#75715e"># The removed element can be stored in a variable</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: [&#39;mango&#39;, &#39;kiwi&#39;, &#39;cherry&#39;]</span>
+</span></span><span style="display:flex;"><span>print(popped)  <span style="color:#75715e"># Output: orange</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>sort()  <span style="color:#75715e"># Sorts the list in ascending order</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: [&#39;cherry&#39;, &#39;kiwi&#39;, &#39;mango&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>reverse()  <span style="color:#75715e"># Reverses the order of the list</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: [&#39;mango&#39;, &#39;kiwi&#39;, &#39;cherry&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;kiwi&#34;</span>)  <span style="color:#75715e"># Adds another kiwi to the end of the list</span>
+</span></span><span style="display:flex;"><span>print(fruits<span style="color:#f92672">.</span>count(<span style="color:#e6db74">&#34;kiwi&#34;</span>))  <span style="color:#75715e"># Counts occurrences of kiwi: Output: 2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#34;kiwi&#34;</span>)  <span style="color:#75715e"># Removes the first occurrence of kiwi </span>
+</span></span><span style="display:flex;"><span>                       <span style="color:#75715e"># (you can also use del fruits[1] to remove by index)</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: [&#39;mango&#39;, &#39;cherry&#39;, &#39;kiwi&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>extend([<span style="color:#e6db74">&#34;grape&#34;</span>, <span style="color:#e6db74">&#34;melon&#34;</span>])  <span style="color:#75715e"># Adds multiple items to the end of the list</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: [&#39;mango&#39;, &#39;cherry&#39;, &#39;kiwi&#39;, &#39;grape&#39;, &#39;melon&#39;]</span></span></span></code></pre></div>
+<p>You can slice a list (or any other iterable) just like a string:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;cherry&#34;</span>, <span style="color:#e6db74">&#34;orange&#34;</span>, <span style="color:#e6db74">&#34;kiwi&#34;</span>]
+</span></span><span style="display:flex;"><span>print(fruits[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>])  <span style="color:#75715e"># Output: [&#39;banana&#39;, &#39;cherry&#39;]</span></span></span></code></pre></div>
+<p>You can check if a value exists in a list using the <code>in</code> keyword:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;apple&#34;</span> <span style="color:#f92672">in</span> fruits:
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;Apple is in the list&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## OR </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;apple&#34;</span> <span style="color:#f92672">in</span> fruits
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># Output: True</span></span></span></code></pre></div>
+<p>List unpacking - assigning list elements to variables</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;cherry&#34;</span>]
+</span></span><span style="display:flex;"><span>x, y, z <span style="color:#f92672">=</span> fruits
+</span></span><span style="display:flex;"><span>print(x)  <span style="color:#75715e"># Output: apple</span>
+</span></span><span style="display:flex;"><span>print(y)  <span style="color:#75715e"># Output: banana</span>
+</span></span><span style="display:flex;"><span>print(z)  <span style="color:#75715e"># Output: cherry</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># If you have more variables than elements in the list, you will get a ValueError.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># To avoid this, you can use the * operator to assign the remaining elements to a list:</span>
+</span></span><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;cherry&#34;</span>, <span style="color:#e6db74">&#34;orange&#34;</span>, <span style="color:#e6db74">&#34;kiwi&#34;</span>]
+</span></span><span style="display:flex;"><span>x, y, <span style="color:#f92672">*</span>z <span style="color:#f92672">=</span> fruits
+</span></span><span style="display:flex;"><span>print(x)  <span style="color:#75715e"># Output: apple</span>
+</span></span><span style="display:flex;"><span>print(y)  <span style="color:#75715e"># Output: banana</span>
+</span></span><span style="display:flex;"><span>print(z)  <span style="color:#75715e"># Output: [&#39;cherry&#39;, &#39;orange&#39;, &#39;kiwi&#39;]</span></span></span></code></pre></div>
+<h2 id="tuples----">Tuples - <code>&quot;( )&quot;</code></h2>
+<p>A tuple is an <strong>immutable</strong> collection which is <strong>ordered</strong> and unchangeable. Allows duplicate members.
+It can store items of different data types.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;cherry&#34;</span>)
+</span></span><span style="display:flex;"><span>print(fruits[<span style="color:#ae81ff">0</span>])  <span style="color:#75715e"># First element: Output: apple</span>
+</span></span><span style="display:flex;"><span>print(fruits[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])  <span style="color:#75715e"># Last element: Output: cherry</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fruits[0] = &#34;mango&#34;  # This will raise a TypeError because tuples are immutable</span>
+</span></span><span style="display:flex;"><span>print(len(fruits))  <span style="color:#75715e"># Output: 3</span></span></span></code></pre></div>
+<h2 id="dictionaries----">Dictionaries - <code>&quot;{ }&quot;</code></h2>
+<p>A dictionary is a <strong>mutable</strong> collection which is <strong>unordered</strong>, changeable, and indexed. No duplicate members.
+It stores data in <code>key-value</code> pairs.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>person <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;age&#34;</span>: <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#34;city&#34;</span>: <span style="color:#e6db74">&#34;New York&#34;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(person[<span style="color:#e6db74">&#34;name&#34;</span>])  <span style="color:#75715e"># Output: John if exists, otherwise raises a KeyError</span>
+</span></span><span style="display:flex;"><span>print(person<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;age&#34;</span>))  <span style="color:#75715e"># Output: 30 if exists, otherwise None</span>
+</span></span><span style="display:flex;"><span>print(person<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;job&#34;</span>, <span style="color:#e6db74">&#34;Not Found&#34;</span>))  <span style="color:#75715e"># Output: Not Found if key doesn&#39;t exist</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>person[<span style="color:#e6db74">&#34;age&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">31</span>  <span style="color:#75715e"># Updates the age</span>
+</span></span><span style="display:flex;"><span>person[<span style="color:#e6db74">&#34;job&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Engineer&#34;</span>  <span style="color:#75715e"># Adds a new key-value pair</span>
+</span></span><span style="display:flex;"><span>print(person)  <span style="color:#75715e"># Output: {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 31, &#39;city&#39;: &#39;New York&#39;, &#39;job&#39;: &#39;Engineer&#39;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> person[<span style="color:#e6db74">&#34;city&#34;</span>]  <span style="color:#75715e"># Removes the key-value pair with key &#34;city&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR</span>
+</span></span><span style="display:flex;"><span>person<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#34;city&#34;</span>, <span style="color:#66d9ef">None</span>)  <span style="color:#75715e"># Removes the key-value pair with key &#34;city&#34;, returns None if key doesn&#39;t exist</span>
+</span></span><span style="display:flex;"><span>person<span style="color:#f92672">.</span>popitem()  <span style="color:#75715e"># Removes the last inserted key-value pair</span>
+</span></span><span style="display:flex;"><span>print(person)  <span style="color:#75715e"># Output: {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 31, &#39;job&#39;: &#39;Engineer&#39;}</span>
+</span></span><span style="display:flex;"><span>print(len(person))  <span style="color:#75715e"># Output: 3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Load/update multiple key-value pairs</span>
+</span></span><span style="display:flex;"><span>person<span style="color:#f92672">.</span>update({<span style="color:#e6db74">&#34;city&#34;</span>: <span style="color:#e6db74">&#34;New York&#34;</span>, <span style="color:#e6db74">&#34;country&#34;</span>: <span style="color:#e6db74">&#34;USA&#34;</span>})
+</span></span><span style="display:flex;"><span>print(person)  <span style="color:#75715e"># Output: {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 31, &#39;job&#39;: &#39;Engineer&#39;, &#39;city&#39;: &#39;New York&#39;, &#39;country&#39;: &#39;USA&#39;}</span>
+</span></span><span style="display:flex;"><span>person<span style="color:#f92672">.</span>update(job<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Manager&#34;</span>)  <span style="color:#75715e"># Updates the job</span>
+</span></span><span style="display:flex;"><span>print(person)  <span style="color:#75715e"># Output: {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 31, &#39;job&#39;: &#39;Manager&#39;, &#39;city&#39;: &#39;New York&#39;, &#39;country&#39;: &#39;USA&#39;}</span></span></span></code></pre></div>
+<p>Iterating through a dictionary:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>person <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;age&#34;</span>: <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#34;city&#34;</span>: <span style="color:#e6db74">&#34;New York&#34;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Iterate through keys</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> key <span style="color:#f92672">in</span> person: 
+</span></span><span style="display:flex;"><span>    print(key, person[key])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Iterate through values</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> person<span style="color:#f92672">.</span>values(): 
+</span></span><span style="display:flex;"><span>    print(value)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Iterate through key-value pairs</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> person<span style="color:#f92672">.</span>items(): 
+</span></span><span style="display:flex;"><span>    print(key, value)</span></span></code></pre></div>
+<h2 id="sets----">Sets - <code>&quot;{ }&quot;</code></h2>
+<p>A set is a <strong>mutable</strong> collection which is <strong>unordered</strong> and unindexed. No duplicate members.
+It can store items of different data types. It&rsquo;s different from a dictionary because it only stores keys (no values).</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;cherry&#34;</span>}
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: {&#39;banana&#39;, &#39;cherry&#39;, &#39;apple&#39;} (order may vary)</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;banana&#34;</span> <span style="color:#f92672">in</span> fruits)  <span style="color:#75715e"># Output: True if exists, otherwise False  </span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#34;orange&#34;</span>)  <span style="color:#75715e"># Adds orange to the set</span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#34;banana&#34;</span>)  <span style="color:#75715e"># Removes banana from the set, raises KeyError if not found</span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>discard(<span style="color:#e6db74">&#34;banana&#34;</span>)  <span style="color:#75715e"># Removes banana from the set if it exists, does nothing if not found</span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>pop()  <span style="color:#75715e"># Removes and returns an arbitrary element from the set</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: {&#39;cherry&#39;, &#39;apple&#39;, &#39;orange&#39;}</span>
+</span></span><span style="display:flex;"><span>print(len(fruits))  <span style="color:#75715e"># Output: 3</span></span></span></code></pre></div>
+<p>Adding multiple items to a set (you need to provide an iterable like a list or another set):</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fruits <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;cherry&#34;</span>}
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>update([<span style="color:#e6db74">&#34;orange&#34;</span>, <span style="color:#e6db74">&#34;kiwi&#34;</span>])  <span style="color:#75715e"># Adds multiple items to the set </span>
+</span></span><span style="display:flex;"><span>fruits<span style="color:#f92672">.</span>update({<span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;grape&#34;</span>})  <span style="color:#75715e"># Adds multiple items to the set (duplicates are ignored)</span>
+</span></span><span style="display:flex;"><span>print(fruits)  <span style="color:#75715e"># Output: {&#39;banana&#39;, &#39;cherry&#39;, &#39;orange&#39;, &#39;kiwi&#39;, &#39;apple&#39;, &#39;grape&#39;}</span></span></span></code></pre></div>
+<h1 id="functions">Functions</h1>
+<p>Basic function definition and usage:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greet</span>(name):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Hello, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(greet(<span style="color:#e6db74">&#34;Alice&#34;</span>))  <span style="color:#75715e"># Output: Hello, Alice!</span></span></span></code></pre></div>
+<p>A function with default parameters:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greet</span>(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Guest&#34;</span>):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Hello, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(greet())  <span style="color:#75715e"># Output: Hello, Guest!</span>
+</span></span><span style="display:flex;"><span>print(greet(<span style="color:#e6db74">&#34;Bob&#34;</span>))  <span style="color:#75715e"># Output: Hello, Bob!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># If the function returns multiple values, they are returned as a tuple:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_coordinates</span>():
+</span></span><span style="display:flex;"><span>  x <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>  y <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> x, y</span></span></code></pre></div>
+<p>Invoking a function with keyword arguments:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greet</span>(name, age):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Hello, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">! You are </span><span style="color:#e6db74">{</span>age<span style="color:#e6db74">}</span><span style="color:#e6db74"> years old.&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(greet(age<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Charlie&#34;</span>))  <span style="color:#75715e"># Output: Hello, Charlie! You are 25 years old.</span></span></span></code></pre></div>
+<p>Lambda function (anonymous function). It&rsquo;s useful for short, throwaway functions (when you don&rsquo;t want to formally define a function using <code>def</code>). Often used as callbacks or in functional programming (e.g., with <code>map()</code>, <code>filter()</code>, <code>reduce()</code>):</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># lambda arguments: expression(or logic)</span>
+</span></span><span style="display:flex;"><span>add <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">+</span> y
+</span></span><span style="display:flex;"><span>print(add(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>)) <span style="color:#75715e"># Output: 8</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">apply_operation</span>(x, y, operation):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> operation(x, y)
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> apply_operation(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>, <span style="color:#66d9ef">lambda</span> a, b: a <span style="color:#f92672">*</span> b)
+</span></span><span style="display:flex;"><span>print(result)  <span style="color:#75715e"># Output: 50 </span></span></span></code></pre></div>
+<h1 id="modules-and-packages">Modules and Packages</h1>
+<p>You can import built-in modules, third-party modules (installed via pip), or your own custom modules.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> math  <span style="color:#75715e"># Importing a built-in module</span>
+</span></span><span style="display:flex;"><span>print(math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">16</span>))  <span style="color:#75715e"># Output: 4.0 </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random <span style="color:#66d9ef">as</span> rnd  <span style="color:#75715e"># Importing with an alias</span>
+</span></span><span style="display:flex;"><span>print(rnd<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>))  <span style="color:#75715e"># Output: Random integer between 1 and 10  </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime  <span style="color:#75715e"># Importing specific functions or classes from a module</span>
+</span></span><span style="display:flex;"><span>now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()
+</span></span><span style="display:flex;"><span>print(now)  <span style="color:#75715e"># Output: Current date and time </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime <span style="color:#66d9ef">as</span> dt  <span style="color:#75715e"># Importing specific functions or classes with an alias</span>
+</span></span><span style="display:flex;"><span>now <span style="color:#f92672">=</span> dt<span style="color:#f92672">.</span>now()
+</span></span><span style="display:flex;"><span>print(now)  <span style="color:#75715e"># Output: Current date and time </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import custom module (make sure mymodule.py is in the same directory or in the Python path)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> mymodule
+</span></span><span style="display:flex;"><span>mymodule<span style="color:#f92672">.</span>greet(<span style="color:#e6db74">&#34;Alice&#34;</span>)  <span style="color:#75715e"># Assuming mymodule has a function greet()   </span></span></span></code></pre></div>
+<h1 id="classes-and-objects">Classes and Objects</h1>
+<p>Classes are blueprints for creating objects. An object is an instance of a class.</p>
+<p><code>self</code> represents the instance of the class. It is used to access variables and methods associated with the current object. If you don&rsquo;t use <code>self</code>, Python will not know which instance you are referring to (and most likely you will use a global variable or raise an error).</p>
+<p><code>__init__</code> is a special method (also called a constructor) that is automatically called when an object of the class is created. It is used to initialize the object&rsquo;s attributes.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Class attribute</span>
+</span></span><span style="display:flex;"><span>    species <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Canis familiaris&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Initializer / Instance attributes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, name, age):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>age <span style="color:#f92672">=</span> age
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Instance method</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bark</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74"> says woof!&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">loud_bark</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74"> says WOOF WOOF!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pluto <span style="color:#f92672">=</span> Dog(<span style="color:#e6db74">&#34;Pluto&#34;</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(pluto<span style="color:#f92672">.</span>name)     <span style="color:#75715e"># Output: Pluto</span>
+</span></span><span style="display:flex;"><span>print(pluto<span style="color:#f92672">.</span>age)      <span style="color:#75715e"># Output: 3</span>
+</span></span><span style="display:flex;"><span>print(pluto<span style="color:#f92672">.</span>species)  <span style="color:#75715e"># Output: Canis familiaris</span>
+</span></span><span style="display:flex;"><span>print(pluto<span style="color:#f92672">.</span>bark())   <span style="color:#75715e"># Output: Pluto says woof!</span>
+</span></span><span style="display:flex;"><span>pluto<span style="color:#f92672">.</span>loud_bark()     <span style="color:#75715e"># Output: Pluto says WOOF WOOF!</span></span></span></code></pre></div>
+<p>Duck typing - if it looks like a duck and quacks like a duck, it&rsquo;s a duck. It&rsquo;s usefull when you want to write functions that can work with different types of objects, as long as they have the same method or attribute.:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Duck</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">make_sound</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Quack!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">make_sound</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Meow!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">make_sound</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Woof!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">animal_sound</span>(animal):
+</span></span><span style="display:flex;"><span>    print(animal<span style="color:#f92672">.</span>make_sound())  <span style="color:#75715e"># Works for any object that has a make_sound() method </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>duck <span style="color:#f92672">=</span> Duck()
+</span></span><span style="display:flex;"><span>animal_sound(duck)  <span style="color:#75715e"># Output: Quack!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dog <span style="color:#f92672">=</span> Dog()
+</span></span><span style="display:flex;"><span>animal_sound(dog)  <span style="color:#75715e"># Output: Woof!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#f92672">=</span> Cat() 
+</span></span><span style="display:flex;"><span>animal_sound(cat)  <span style="color:#75715e"># Output: Meow!</span></span></span></code></pre></div>
+<hr>
+<h6 id="todo">ToDo:</h6>
+<ul>
+<li>add functional programming examples (map, filter, reduce, lambda)</li>
+<li>add info about <code>*args</code> and <code>**kwargs</code></li>
+<li>add info about <code>__init__</code> and classes</li>
+<li>add info about list comprehensions</li>
+<li>add info about importing modules and packages</li>
+<li>add asynchronous programming (async, await)</li>
+<li>add file handling (open, read, write, with)</li>
+<li>add table of contents</li>
+<li>add Best practices and coding standards (PEP 8) - pehaps another page?</li>
+<li>add info about annotations (type hints)</li>
+<li>add info about decorators</li>
+<li>add info about error and exception handling (try, except, finally, raise)</li>
+<li>make this a cheat sheet and publish on GitHub Pages
+<ul>
+<li><a href="https://www.curiousmints.com/deploying-a-hugo-website-to-github-pages-using-github-actions/" rel="external" target="_blank">guide1</a></li>
+<li><a href="https://www.testingwithmarie.com/posts/20241126-create-a-static-blog-with-hugo/" rel="external" target="_blank">guide2</a></li>
+</ul>
+</li>
+</ul>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Sep 18, 2025
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+            <div class="logo-title">Second Brain - Cheat Sheets and other utilites</div>
+          </a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/python/index.html"><a class="padding" href="/python/index.html">Python</a><ul id="R-subsections-e59a306ea2eb42b73261573b05085bcc" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/python/1---basics/index.html"><a class="padding" href="/python/1---basics/index.html">Basics</a><ul id="R-subsections-526c47093f24705b5a2e54ffc63c687b" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/python/2---data_strucutures/index.html"><a class="padding" href="/python/2---data_strucutures/index.html">Data_strucutures</a></li>
+            <li class="active " data-nav-id="/python/basics_test/index.html"><a class="padding" href="/python/basics_test/index.html">Basics - to remove</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1758206728" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1758206728" defer></script>
+    <script src="/js/theme.js?1758206728" defer></script>
+  </body>
+</html>

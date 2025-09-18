@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Second Brain - Cheat Sheets and other utilites</title>
+    <link>http://localhost:1313/index.html</link>
+    <description>This is your new home page.&#xA;We’ve got some great starter content for you to edit and make your own.&#xA;ToDo: add functional programming examples (map, filter, reduce, lambda) add info about *args and **kwargs add info about __init__ and classes add info about list comprehensions add info about importing modules and packages add asynchronous programming (async, await) add file handling (open, read, write, with) add table of contents add Best practices and coding standards (PEP 8) - pehaps another page? add info about annotations (type hints) add info about decorators add info about error and exception handling (try, except, finally, raise) make this a cheat sheet and publish on GitHub Pages guide1 guide2</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 18 Sep 2025 14:29:43 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/python/index.html</link>
+      <pubDate>Thu, 18 Sep 2025 14:29:43 +0100</pubDate>
+      <guid>http://localhost:1313/python/index.html</guid>
+      <description>This is a python repository.</description>
+    </item>
+  </channel>
+</rss>

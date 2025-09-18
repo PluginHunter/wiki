@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Basics :: Second Brain - Cheat Sheets and other utilites</title>
+    <link>http://localhost:1313/python/1---basics/index.html</link>
+    <description>Basic Python functions len() - function returns the length of a string, list, tuple, or dictionary. type() - function returns the type of a variable. Strings String slicing string[start:end] - slices a string from index start to end. The end index is exclusive. string[start:end:step] - slices a string from index start to end with a step of step (the step can have a negative value). String methods string.lower() - converts all characters in the string to lowercase. string.upper() - converts all characters in the string to uppercase. string.capitalize() - capitalizes the first character of the string. string.title() - capitalizes the first character of each word in the string. string.strip() - removes leading and trailing whitespace from the string. string.lstrip() - removes leading whitespace from the string. string.rstrip() - removes trailing whitespace from the string. string.replace(old, new) - replaces occurrences of old substring with new substring. string.split(delimiter) - splits the string into a list of substrings based on the specified delimiter. String functions string.startswith(substring) - checks if the string starts with the specified substring. Returns True or False. string.endswith(substring) - checks if the string ends with the specified substring. Returns True or False. string.find(substring) - returns the lowest index of the substring if found in the string. Returns -1 if not found. string.index(substring) - returns the lowest index of the substring if found in the string. Raises a ValueError if not found. string.count(substring) - returns the number of occurrences of the substring in the string. Type casting float_num = 10.5 int_num = int(float_num) # Converts float to int, truncating the decimal part print(int_num) # Output: 10 print(type(int_num)) # Output: &lt;class &#39;int&#39;&gt; str_num = str(int_num) # Converts int to string print(str_num) # Output: &#39;10&#39; print(type(str_num)) # Output: &lt;class &#39;str&#39;&gt; Logical operators and or &amp; - logical AND operator. Returns True if both operands are true. or or |- logical OR operator. Returns True if at least one operand is true. not or ! - logical NOT operator. Returns True if the operand is false. Conditional statements if a &gt; b: print(&#34;a is greater than b&#34;) elif a &lt; b: print(&#34;a is less than b&#34;) else: print(&#34;a is equal to b&#34;) Loops For loop A for loop is used to iterate over a sequence (like a list, tuple, dictionary, set, or string - basically any iterable object).</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 18 Sep 2025 14:28:19 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/python/1---basics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>aTest</title>
+      <link>http://localhost:1313/python/1---basics/atest/index.html</link>
+      <pubDate>Thu, 18 Sep 2025 14:28:19 +0100</pubDate>
+      <guid>http://localhost:1313/python/1---basics/atest/index.html</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

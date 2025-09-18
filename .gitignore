@@ -1,0 +1,24 @@
+# Ignore the public folder (generated site)
+public/
+
+# Ignore Hugo resources cache
+resources/_gen/
+
+# Ignore the build lock file
+.hugo_build.lock
+
+# Ignore Hugo executable files
+hugo.exe
+hugo.linux
+hugo.darwin
+
+# Common OS and editor files to ignore
+.DS_Store
+Thumbs.db
+
+# Optional: Node modules if you use Node for assets
+node_modules/
+
+# Optional: Dist and temp folders used in some builds
+dist/
+tmp/
