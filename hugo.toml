@@ -2,3 +2,5 @@ baseURL = 'https://example.org/'
 languageCode = 'en-gb'
 title = 'Second Brain - Cheat Sheets and other utilites'
 theme = 'hugo-theme-relearn'
+[[params.themeVariant]]
+  identifier = 'neon'

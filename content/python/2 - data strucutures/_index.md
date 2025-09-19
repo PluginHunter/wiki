@@ -1,6 +1,6 @@
 +++
 date = '2025-09-18T14:29:43+01:00'
-title = 'Data_strucutures'
+title = 'Data strucutures'
 weight = 2
 +++
 ## Lists - `"[ ]"`
@@ -72,7 +72,9 @@ print(z)  # Output: cherry
 # If you have more variables than elements in the list, you will get a ValueError.
 # To avoid this, you can use the * operator to assign the remaining elements to a list:
 fruits = ["apple", "banana", "cherry", "orange", "kiwi"]
+
 x, y, *z = fruits
+
 print(x)  # Output: apple
 print(y)  # Output: banana
 print(z)  # Output: ['cherry', 'orange', 'kiwi']
@@ -84,9 +86,12 @@ A tuple is an **immutable** collection which is **ordered** and unchangeable. Al
 It can store items of different data types.
 ```python
 fruits = ("apple", "banana", "cherry")
+
 print(fruits[0])  # First element: Output: apple
 print(fruits[-1])  # Last element: Output: cherry
+
 # fruits[0] = "mango"  # This will raise a TypeError because tuples are immutable
+
 print(len(fruits))  # Output: 3
 ```
 
@@ -107,13 +112,16 @@ print(person)  # Output: {'name': 'John', 'age': 31, 'city': 'New York', 'job': 
 del person["city"]  # Removes the key-value pair with key "city"
 # OR
 person.pop("city", None)  # Removes the key-value pair with key "city", returns None if key doesn't exist
+
 person.popitem()  # Removes the last inserted key-value pair
+
 print(person)  # Output: {'name': 'John', 'age': 31, 'job': 'Engineer'}
 print(len(person))  # Output: 3
 
 # Load/update multiple key-value pairs
 person.update({"city": "New York", "country": "USA"})
 print(person)  # Output: {'name': 'John', 'age': 31, 'job': 'Engineer', 'city': 'New York', 'country': 'USA'}
+
 person.update(job="Manager")  # Updates the job
 print(person)  # Output: {'name': 'John', 'age': 31, 'job': 'Manager', 'city': 'New York', 'country': 'USA'}
 ```
@@ -141,10 +149,12 @@ It can store items of different data types. It's different from a dictionary bec
 fruits = {"apple", "banana", "cherry"}
 print(fruits)  # Output: {'banana', 'cherry', 'apple'} (order may vary)
 print("banana" in fruits)  # Output: True if exists, otherwise False  
+
 fruits.add("orange")  # Adds orange to the set
 fruits.remove("banana")  # Removes banana from the set, raises KeyError if not found
 fruits.discard("banana")  # Removes banana from the set if it exists, does nothing if not found
 fruits.pop()  # Removes and returns an arbitrary element from the set
+
 print(fruits)  # Output: {'cherry', 'apple', 'orange'}
 print(len(fruits))  # Output: 3
 ```
@@ -152,7 +162,9 @@ print(len(fruits))  # Output: 3
 Adding multiple items to a set (you need to provide an iterable like a list or another set):
 ```python
 fruits = {"apple", "banana", "cherry"}
+
 fruits.update(["orange", "kiwi"])  # Adds multiple items to the set 
 fruits.update({"banana", "grape"})  # Adds multiple items to the set (duplicates are ignored)
+
 print(fruits)  # Output: {'banana', 'cherry', 'orange', 'kiwi', 'apple', 'grape'}
 ``` 
