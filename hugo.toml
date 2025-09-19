@@ -4,3 +4,6 @@ title = 'Second Brain - Cheat Sheets and other utilites'
 theme = 'hugo-theme-relearn'
 [[params.themeVariant]]
   identifier = 'neon'
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
