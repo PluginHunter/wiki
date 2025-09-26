@@ -81,3 +81,23 @@ while i < 6:
   print(i)
   i += 1
 ```
+
+### Break and continue
+- `break` - **exits** the loop when a specified condition is met.
+  ```python
+  for i in range(5):  
+      if i == 3:  
+          break  # Exit the loop when i is 3
+      print(i)  
+  # Output: 0, 1, 2
+  # As soon as i becomes 3, the loop is exited
+  ```
+- `continue` - **skips** the current iteration and moves to the next iteration of the loop.
+  ```python
+  for i in range(5):  
+      if i == 3:  
+          continue  # Skip the iteration when i is 3
+      print(i)  
+  # Output: 0, 1, 2, 4
+  # When i is 3, the print statement is skipped and the loop continues with the next value
+  ```
