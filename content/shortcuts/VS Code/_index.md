@@ -5,4 +5,4 @@ weight = 1
 +++
 ## Basic VS Code shortcuts
 
-`Ctrl + Shift + I` : Multiline edit
+`Alt + Shift + I` : Multiline edit
